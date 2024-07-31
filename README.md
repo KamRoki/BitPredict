@@ -7,9 +7,7 @@ BitPredict is an advanced cryptocurrency price prediction tool that leverages ma
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Examples](#examples)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## Description
@@ -53,3 +51,22 @@ cd BitPredict
 pip install -r requirements.txt
 ```
 ...
+
+## Usage
+After installing BitPredict, you can start using the application by Streamlit app. Here are the basic steps:
+1. **Import Data**: Load market and historical data into the system
+2. **Configurate the Model**: Select the appropriate machine learning model and adjust its parameters
+3. **Run Forecasting**: Perform predictions
+4. **Analyze Results**: Review and interpret the forecast results. 
+
+## Contributing 
+I welcome contributions to BitPredict! If you have ideas, suggestions, or would like to fix bugs, please follow these steps:
+1. Fork the repository
+2. Create a new branch
+3. Make changes
+4. Commit your changes
+5. Push to the branch
+6. Open a pull request.
+
+## Contact
+For questions or support, please reach out to *kami.stachurski@gmail.com*.
