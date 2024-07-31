@@ -38,3 +38,18 @@ To run BitPredict, you need to have the following dependencies installed:
 - Tensorflow
 
 You can install the required packages using `pip`.
+
+## Installation (in progress)
+1. Clone the repository:
+```
+git clone https://github.com/KamRoki/BitPredict.git
+```
+2. Navigate to the project directory:
+```
+cd BitPredict
+```
+3. Install the required packages
+```
+pip install -r requirements.txt
+```
+...
