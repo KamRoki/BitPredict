@@ -162,4 +162,7 @@ cython_debug/
 #.idea/
 
 # Add data folder to gitignore
-data/
+/data/
+
+# Add .DS_Store to gitignore
+.DS_Store
