@@ -33,10 +33,11 @@ To run BitPredict, you need to have the following dependencies installed:
 - Matplotlib
 - Scikit-learn
 - Tensorflow
+- Streamlit
 
 You can install the required packages using `pip`.
 
-## Installation (in progress)
+## Installation ()
 1. Clone the repository:
 ```
 git clone https://github.com/KamRoki/BitPredict.git
@@ -49,7 +50,10 @@ cd BitPredict
 ```
 pip install -r requirements.txt
 ```
-...
+4. Run the Streamlit app
+```
+streamlit run app.py
+```
 
 ## Usage
 After installing BitPredict, you can start using the application by Streamlit app. Here are the basic steps:
