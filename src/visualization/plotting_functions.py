@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import tensorflow as tf
 
 def plot_time_series(timesteps, values, format = '.', start = 0, end = None, label = None):
   """
@@ -20,3 +21,13 @@ def plot_time_series(timesteps, values, format = '.', start = 0, end = None, lab
   if label:
     plt.legend(fontsize = 14) # make label bigger
   plt.grid(True);
+  
+  
+  def get_upper_lower(preds):
+    std = tf.math.reduce_std(preds, axis = 0)
+    interval = 1.96 * std
+    preds_mean = tf.reduce_mean(preds, axis = 0)
+    lower, upper = preds_mean - interval, preds_mean + interval
+    return lower, upper
+  
+  
