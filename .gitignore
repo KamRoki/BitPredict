@@ -166,3 +166,4 @@ cython_debug/
 
 # Add .DS_Store to gitignore
 .DS_Store
+/.DS_Store
