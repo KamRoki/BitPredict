@@ -10,9 +10,6 @@ BitPredict is an advanced cryptocurrency price prediction tool that leverages ma
 - [Contributing](#contributing)
 - [Contact](#contact)
 
-## Description
-BitPredict is a tool designed for forecasting cryptocurrency prices using modern data analysis and predictive modeling techniques, like machine learning and deep learning models. It analyzes market data, historical prices, and halving events, provide users with predictions of future price movements.
-
 ## Models
 All of the trained models are available in text file, in models folder. In this project some models were trained with following mean absolute error values:
 * Model 0: Naive Model (MAE = 530.38)
