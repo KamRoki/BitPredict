@@ -167,3 +167,15 @@ cython_debug/
 # Add .DS_Store to gitignore
 .DS_Store
 /.DS_Store
+
+# Add models to gitignore
+models/naive_model.h5
+models/model_1_dense.keras
+models/model_2_dense.keras
+models/model_3_dense.keras
+models/model_4_conv1d.keras
+models/model_5_lstm.keras
+models/model_6_multivariete_dense.keras
+models/model_7_nbeats.keras
+models/model_8_ensemble.joblib
+models/model_9_future_prediction.keras
