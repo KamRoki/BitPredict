@@ -1,10 +1,31 @@
 import streamlit as st
+import pandas as pd
 
+# ---
+def import_data():
+    '''
+    Import CSV data of Bitcoin prices.
+    '''
+    uploaded_file = st.file_uploader('Upload your CSV file',
+                                     type = 'csv',
+                                     accept_multiple_files = False)
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file,
+                         parse_dates = ['Date'],
+                         index_col = ['Date'])
+        return df
+    return None
+
+
+
+# ---
 # App title
 st.set_page_config(page_title = 'BitPredict',
                    layout = 'wide')
 
-    
+
+
+# ---    
 # Define the content for each page
 def page_home():
     st.title('Welcome to BitPredict')
@@ -15,24 +36,31 @@ def page_about():
     st.title('About me')
     st.write('My name is Kamil and I am a Data Scientist and PhD Candidate. With a passion for uncovering insights through data, I specialize in leveraging advanced analytical techniques and machine learning algorithms to solve complex problems and drive informed decision-making. My journey in data science is complemented by my PhD studies, where I focus on analyzing magnrtic resonance imaging images.')
     
-    
-    
-    
-    
-
+def page_data():
+    st.title('Exploratory Data Analysis')
+    df = import_data()
+    if df is not None:
+        st.write('Data loaded successfully!')
+        st.dataframe(df.head())
+    else:
+        st.write('Please upload a CSV file to get started.')
+        
+        
+        
+# ---
 # Initialize session state for page selection
 if 'page' not in st.session_state:
     st.session_state.page = 'Home'
     
     
-    
-    
-
+# ---
 # Sidebar for navigation
 with st.sidebar:
     st.title('Menu')
     if st.button('Home'):
         st.session_state.page = 'Home'
+    if st.button('Load data'):
+        st.session_state.page = 'Load data'
     if st.button('About me'):
         st.session_state.page = 'About me'
 
@@ -41,3 +69,5 @@ if st.session_state.page == 'Home':
     page_home()
 elif st.session_state.page == 'About me':
     page_about()
+elif st.session_state.page == 'Load data':
+    page_data()
