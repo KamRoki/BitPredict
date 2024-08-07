@@ -29,3 +29,5 @@ def eda_data(df):
     ax.set_ylabel('Price (USD)')
     st.pyplot(fig)
     
+    # Make some description
+    st.write(f'Bitcoin DataFrame has length of {len(df)}.')    
